@@ -1,0 +1,22 @@
+{
+  "name": "Gr8 Glaze Refinishing",
+  "short_name": "Gr8 Glaze",
+  "description": "Professional bathtub and tile refinishing (reglazing) services in the LA area",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+

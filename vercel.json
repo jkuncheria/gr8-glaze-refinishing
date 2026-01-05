@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/ourwork",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/bathtub-refinishing-marietta-ga",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/service-page/garden-tub-resurfacing",
+      "destination": "/services",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
+
