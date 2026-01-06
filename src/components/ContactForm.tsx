@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Send, Upload, X, User, Loader2, MapPin, Clock, CheckCircle2, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,8 +15,6 @@ const ContactForm = () => {
     phone: "",
     email: "",
     address: "",
-    budget: "",
-    service: "",
     message: "",
   });
   const [uploadedFiles, setUploadedFiles] = useState<File[]>([]);
@@ -58,8 +55,6 @@ const ContactForm = () => {
         phone: "",
         email: "",
         address: "",
-        budget: "",
-        service: "",
         message: "",
       });
       setUploadedFiles([]);
@@ -132,8 +127,8 @@ const ContactForm = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-sm text-muted-foreground mb-1">Phone</h3>
-                        <a href="tel:3239477439" className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
-                          (323) 947-7439
+                        <a href="tel:3238551752" className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                          (323) 855-1752
                         </a>
                       </div>
                     </div>
@@ -268,46 +263,6 @@ const ContactForm = () => {
                           onChange={handleChange}
                           className="h-12 pl-10 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
                           placeholder="123 Main St, Los Angeles, CA 90001"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Service and Budget Row */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <Label htmlFor="service" className="text-foreground text-sm font-semibold flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                          Service Needed
-                        </Label>
-                        <Select
-                          value={formData.service}
-                          onValueChange={(value) => setFormData({ ...formData, service: value })}
-                          disabled={isSubmitting}
-                        >
-                          <SelectTrigger className="h-12 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg disabled:opacity-50 disabled:cursor-not-allowed">
-                            <SelectValue placeholder="Select a service" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="bathtub">Bathtub Refinishing</SelectItem>
-                            <SelectItem value="tile">Tile Resurfacing</SelectItem>
-                            <SelectItem value="color-change">Color Changes</SelectItem>
-                            <SelectItem value="commercial">Commercial Refinishing</SelectItem>
-                            <SelectItem value="multiple">Multiple Services</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="budget" className="text-foreground text-sm font-semibold flex items-center gap-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
-                          Budget Range
-                        </Label>
-                        <Input
-                          id="budget"
-                          name="budget"
-                          value={formData.budget}
-                          onChange={handleChange}
-                          className="h-12 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
-                          placeholder="e.g., $500 - $1,000"
                         />
                       </div>
                     </div>

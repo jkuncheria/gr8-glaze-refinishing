@@ -278,7 +278,7 @@ const Warranty = () => {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <a href="tel:3239477439">(323) 947-7439</a>
+                    <a href="tel:3238551752">(323) 855-1752</a>
                   </Button>
                 </div>
               </CardContent>

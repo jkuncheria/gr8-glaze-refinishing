@@ -17,7 +17,7 @@ const SEO = ({
   description = "Professional bathtub and tile refinishing (reglazing) services in the LA area. Restore surfaces to look new with specialized coatings. Cost-effective alternative to replacement.",
   keywords = "bathtub refinishing LA, tile resurfacing Los Angeles, bathtub reglazing, tile refinishing, bathroom refinishing, bathtub color change, commercial refinishing, San Fernando Valley",
   canonical,
-  ogImage = "https://www.gr8glazerefinishing.com/logo.png",
+  ogImage = "https://www.gr8glazerefinishing.com/gr8glazelogo.png",
   ogType = "website",
   noindex = false,
   structuredData,

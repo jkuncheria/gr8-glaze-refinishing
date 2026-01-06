@@ -11,6 +11,7 @@ import Marietta from "./pages/Marietta";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
+import Gallery from "./pages/Gallery";
 import GlazeGuardPro from "./pages/GlazeGuardPro";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
                 {/* <Route path="/warranty" element={<Warranty />} /> */}
                 {/* <Route path="/care-tips" element={<CareTips />} /> */}

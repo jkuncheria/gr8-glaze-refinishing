@@ -266,7 +266,7 @@ const CareTips = () => {
                   If you ever have a question about a product, send us a picture or text us first. We're happy to guide you.
                 </p>
                 <Button size="lg" asChild className="bg-accent hover:bg-accent/90">
-                  <a href="tel:3239477439">
+                  <a href="tel:3238551752">
                     Contact Us
                   </a>
                 </Button>

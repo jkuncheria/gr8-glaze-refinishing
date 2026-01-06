@@ -1,74 +1,75 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Home, Bath, UtensilsCrossed, Droplet, ShowerHead, Waves } from "lucide-react";
+import { Sparkles, Home, Bath, UtensilsCrossed, Droplet, ShowerHead, Waves, Package, WashingMachine, SquareStack } from "lucide-react";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema, getServiceSchema } from "@/lib/structuredData";
 
 const allServices = [
+  // First 3 services (from homepage)
   {
-    icon: UtensilsCrossed,
-    title: "Countertop Resurfacing",
-    description: "Restore beauty to your countertops with our resurfacing expertise. Durable finishes that look stunning for years.",
-    image: "/Services/CountertopResurfacing.jpg",
+    icon: Bath,
+    title: "Bathtub Refinishing",
+    description: "Restore old, chipped, faded, or dated tubs (cast iron, fiberglass, acrylic) to a new, flawless finish. Professional reglazing that saves thousands compared to replacement.",
+    image: "/bathtub-refinishing.png",
     price: "Call for Free Quote",
   },
   {
     icon: Home,
-    title: "Cabinet Refinishing & Refacing",
-    description: "Breathe new life into your cabinets with professional refacing. Modern finishes at a fraction of the cost of full replacement.",
-    image: "/Services/KitchenRefacing.jpeg",
+    title: "Tile Resurfacing",
+    description: "Renew tile surfaces in bathrooms and kitchens with professional refinishing. Transform dated tiles to look brand new with specialized coatings.",
+    image: "/full-gallery/a5.1.jpeg",
     price: "Call for Free Quote",
   },
   {
-    icon: Bath,
-    title: "Standard Bathtub Resurfacing",
-    description: "Transform worn bathtubs into like-new condition with our expert refinishing services. Save thousands compared to replacement.",
-    image: "/Services/StandardBathtubResurfacing.jpg",
-    price: "Starts at $725.00",
+    icon: UtensilsCrossed,
+    title: "Color Changes",
+    description: "Transform the color of tubs and tiles (e.g., from powder blue to white). Update your space without the cost and disruption of replacement.",
+    image: "/color-changes.png",
+    price: "Call for Free Quote",
   },
+  // Additional 6 services
   {
-    icon: Droplet,
-    title: "Standard Shower Resurfacing",
-    description: "Restore your shower to pristine condition with professional resurfacing. Durable finishes that resist mold and mildew.",
-    image: "/Services/StandardShowerResurfacing.jpg",
-    price: "Starts at $625.00",
-  },
-  {
-    icon: ShowerHead,
-    title: "Large Shower Resurfacing",
-    description: "Expert resurfacing for large shower spaces. Professional finishes that enhance both beauty and functionality.",
-    image: "/Services/LargeShowerResurfacing.jpg",
-    price: "Starts at $825.00",
+    icon: Package,
+    title: "Cabinet Refinishing",
+    description: "Breathe new life into your cabinets with professional refinishing. Modern finishes at a fraction of the cost of full replacement.",
+    image: "/full-gallery/a7.2.jpeg",
+    price: "Call for Free Quote",
   },
   {
     icon: Waves,
-    title: "Garden Tub Resurfacing",
-    description: "Restore elegance to your garden tub with professional resurfacing. Beautiful finishes that complement your bathroom design.",
-    image: "/Services/GardenTubResurfacing.jpeg",
-    price: "Starts at $825.00",
+    title: "Fiberglass Refinishing",
+    description: "Expert refinishing for fiberglass tubs, showers, and surfaces. Restore durability and beauty with specialized coatings.",
+    image: "/full-gallery/a6.2.jpeg",
+    price: "Call for Free Quote",
   },
   {
-    icon: Sparkles,
-    title: "Jacuzzi Jet Tub Resurfacing",
-    description: "Specialized resurfacing for Jacuzzi and jet tubs. Expert care for your luxury bathing experience.",
-    image: "/Services/JacuzziJetTubResurfacing.jpeg",
-    price: "Starts at $875.00",
+    icon: ShowerHead,
+    title: "Tub and Tile Refinishing",
+    description: "Complete tub and tile refinishing for a cohesive, updated look. Transform your entire bathroom space with professional refinishing.",
+    image: "/full-gallery/a4.1.jpeg",
+    price: "Call for Free Quote",
   },
   {
-    icon: Bath,
-    title: "Claw Foot Tub Reglazing",
-    description: "Preserve the classic beauty of your claw foot tub with professional reglazing. Restore vintage charm with modern durability.",
-    image: "/Services/ClafFootTubReglazing.jpg",
-    price: "Starts at $1200.00",
-    priceNote: "Pick up & delivery available",
+    icon: WashingMachine,
+    title: "Kitchen Sink Refinishing",
+    description: "Restore your kitchen sink to like-new condition with professional refinishing. Durable finishes that resist stains and wear.",
+    image: "/full-gallery/a1.2.jpeg",
+    price: "Call for Free Quote",
   },
   {
-    icon: Home,
-    title: "Tub Enclosure Resurfacing",
-    description: "Complete tub enclosure resurfacing for a cohesive, updated look. Transform your entire bathroom space.",
-    image: "/Services/Tub-EnclosureResurfacing.jpg",
-    price: "Starts at $1050.00",
+    icon: SquareStack,
+    title: "Vanity Refinishing",
+    description: "Update your bathroom vanity with professional refinishing. Transform dated vanities to match your modern bathroom design.",
+    image: "/full-gallery/a2.2.jpeg",
+    price: "Call for Free Quote",
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Countertop Refinishing",
+    description: "Restore beauty to your countertops with our refinishing expertise. Durable finishes that look stunning for years.",
+    image: "/full-gallery/a1.4.jpeg",
+    price: "Call for Free Quote",
   },
 ];
 
@@ -131,7 +132,7 @@ const Services = () => {
                           <div className="text-xs text-muted-foreground mb-2 ml-1">{service.priceNote}</div>
                         )}
                         {service.price === "Call for Free Quote" ? (
-                          <a href="tel:3239477439" className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20 hover:bg-secondary/70 transition-colors cursor-pointer">
+                          <a href="tel:3238551752" className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20 hover:bg-secondary/70 transition-colors cursor-pointer">
                             <span className="text-lg font-semibold text-foreground">{service.price}</span>
                           </a>
                         ) : (

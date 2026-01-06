@@ -37,8 +37,8 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="font-semibold text-sm text-foreground/70 mb-2">Phone</h3>
-                    <a href="tel:3239477439" className="text-foreground hover:text-accent transition-colors font-medium">
-                      (323) 947-7439
+                    <a href="tel:3238551752" className="text-foreground hover:text-accent transition-colors font-medium">
+                      (323) 855-1752
                     </a>
                   </CardContent>
                 </Card>

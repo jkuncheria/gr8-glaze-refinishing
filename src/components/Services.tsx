@@ -9,21 +9,21 @@ const homePageServices = [
     icon: Bath,
     title: "Bathtub Refinishing",
     description: "Restore old, chipped, faded, or dated tubs (cast iron, fiberglass, acrylic) to a new, flawless finish. Professional reglazing that saves thousands compared to replacement.",
-    image: "/Services/StandardBathtubResurfacing.jpg",
+    image: "/bathtub-refinishing.png",
     price: "Call for Free Quote",
   },
   {
     icon: Home,
     title: "Tile Resurfacing",
     description: "Renew tile surfaces in bathrooms and kitchens with professional refinishing. Transform dated tiles to look brand new with specialized coatings.",
-    image: "/Services/StandardShowerResurfacing.jpg",
+    image: "/full-gallery/a5.1.jpeg",
     price: "Call for Free Quote",
   },
   {
     icon: UtensilsCrossed,
     title: "Color Changes",
     description: "Transform the color of tubs and tiles (e.g., from powder blue to white). Update your space without the cost and disruption of replacement.",
-    image: "/Services/CountertopResurfacing.jpg",
+    image: "/color-changes.png",
     price: "Call for Free Quote",
   },
 ];
@@ -53,6 +53,8 @@ const Services = () => {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <CardContent className="p-4 md:p-6 flex flex-col flex-grow">
@@ -66,7 +68,7 @@ const Services = () => {
                   {service.price && (
                     <div className="mt-auto pt-4">
                       {service.price === "Call for Free Quote" ? (
-                        <a href="tel:3239477439" className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20 hover:bg-secondary/70 transition-colors cursor-pointer">
+                        <a href="tel:3238551752" className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20 hover:bg-secondary/70 transition-colors cursor-pointer">
                           <span className="text-base md:text-lg font-semibold text-foreground">{service.price}</span>
                         </a>
                       ) : (

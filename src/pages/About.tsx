@@ -79,16 +79,25 @@ const About = () => {
                   </h2>
                   <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
                     <p>
-                      <span className="font-semibold text-foreground">Gr8 Glaze Refinishing</span> is a professional refinishing company based in the San Fernando Valley, CA, specializing in bathtub and tile refinishing (reglazing) for both residential and commercial properties. We restore surfaces to look new using specialized coatings, highlighting quality, warranties, and cost-effectiveness compared to replacement.
+                      My name is <span className="font-semibold text-foreground">Noe Pineda</span>, founder of <span className="font-semibold text-foreground">Gr8 Glaze Refinishing, Inc.</span>
                     </p>
                     <p>
-                      We focus on saving money and extending fixture life by repairing chips, changing colors, and updating dated surfaces. Our techniques chemically bond new finishes to old ones for durability, creating a strong bond that lasts for years.
+                      For years, I worked in the refinishing industry giving everything I had to my craft. I delivered quality work, paid attention to details, and took pride in every surface I refinished. But growth opportunities were never offered. Speed and sloppy work were preferred over doing the job right — and that never sat well with me.
                     </p>
                     <p>
-                      Our services include bathtub refinishing (restoring old, chipped, faded, or dated tubs including cast iron, fiberglass, and acrylic), tile resurfacing (renewing tile surfaces in bathrooms and kitchens), color changes (transforming the color of tubs and tiles), and commercial services for properties needing a fresh look.
+                      After many years of learning the ropes, perfecting my skills, and understanding what truly makes a refinishing job last, I reached a turning point. I made one of the hardest decisions of my life — I quit my job and took a leap of faith.
                     </p>
                     <p>
-                      <strong>Key Benefits:</strong> Cost-effective (cheaper than full replacement), durable (professional application creates a strong bond with warranties available), environmentally friendly (extends the life of existing fixtures, reducing waste), and fast (transforms surfaces in hours, not weeks, with minimal disruption).
+                      That decision is how <span className="font-semibold text-foreground">Gr8 Glaze Refinishing</span> was born.
+                    </p>
+                    <p>
+                      I started this company with one simple belief: <span className="font-semibold text-foreground">quality should never be rushed</span>. Every project deserves proper preparation, professional application, and attention to detail. I treat every home as if it were my own, because my name and reputation stand behind every job.
+                    </p>
+                    <p>
+                      I'm still learning and growing every day, and I take pride in improving with each project. This journey has been built on hard work, honesty, and passion for the trade — and I'm grateful for every customer who allows me to do what I love.
+                    </p>
+                    <p className="text-xl font-semibold text-foreground italic">
+                      Another day. Another spray. Another job done right.
                     </p>
                   </div>
                 </div>

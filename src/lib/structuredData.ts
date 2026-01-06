@@ -8,7 +8,7 @@ export const getLocalBusinessSchema = () => ({
   "image": "https://www.gr8glazerefinishing.com/logo.png",
   "logo": "https://www.gr8glazerefinishing.com/logo.png",
   "url": "https://www.gr8glazerefinishing.com",
-  "telephone": "+13239477439",
+  "telephone": "+13238551752",
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
@@ -104,7 +104,7 @@ export const getServiceSchema = (serviceName: string, description: string, price
   "provider": {
     "@type": "LocalBusiness",
     "name": "Gr8 Glaze Refinishing",
-    "telephone": "+13239477439"
+    "telephone": "+13238551752"
   },
   "areaServed": {
     "@type": "City",
@@ -139,7 +139,7 @@ export const getOrganizationSchema = () => ({
   "logo": "https://www.gr8glazerefinishing.com/logo.png",
   "contactPoint": {
     "@type": "ContactPoint",
-    "telephone": "+13239477439",
+    "telephone": "+13238551752",
     "contactType": "Customer Service",
     "areaServed": "US",
     "availableLanguage": "English"

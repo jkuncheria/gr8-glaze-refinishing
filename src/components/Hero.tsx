@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "lucide-react";
-import heroImage from "@/assets/hero-bathroom.jpg";
+import heroImage from "@/assets/hero-bathroom.jpeg";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -25,12 +25,15 @@ const Hero = () => {
           src={heroImage}
           alt="Modern luxury bathroom with refinished surfaces"
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/50" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-40 md:pt-32 pb-32 text-center">
+      <div className="relative z-10 container mx-auto px-4 pt-48 md:pt-40 pb-32 text-center">
         <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
           <h1 className="font-display text-5xl md:text-7xl font-bold text-background leading-tight mb-15">
             The #1 Refinishing Specialists in Los Angeles

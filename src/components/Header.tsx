@@ -76,7 +76,7 @@ const Header = () => {
             size="sm"
             className="md:hidden bg-accent hover:bg-accent/90 text-background text-xs px-3 py-2 h-auto relative z-20"
           >
-            <a href="tel:3239477439">
+            <a href="tel:3238551752">
               <Phone className="w-3.5 h-3.5 mr-1.5" />
               Call Now
             </a>
@@ -91,7 +91,10 @@ const Header = () => {
             <img 
               src="/gr8glazelogo.png" 
               alt="Gr8 Glaze Refinishing Logo" 
-              className="h-16 md:h-20 object-contain"
+              className="h-20 md:h-24 object-contain"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </Link>
           
@@ -104,7 +107,10 @@ const Header = () => {
             <img 
               src="/gr8glazelogo.png" 
               alt="Gr8 Glaze Refinishing Logo" 
-              className="h-16 md:h-20 object-contain"
+              className="h-20 md:h-24 object-contain"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
             />
           </Link>
 
@@ -153,6 +159,9 @@ const Header = () => {
             <Link to="/services" className="text-foreground hover:text-accent hover:bg-accent/10 px-3 py-2 rounded-md transition-all">
               Our Services
             </Link>
+            <Link to="/gallery" className="text-foreground hover:text-accent hover:bg-accent/10 px-3 py-2 rounded-md transition-all">
+              Gallery
+            </Link>
             <Link to="/contact" className="text-foreground hover:text-accent hover:bg-accent/10 px-3 py-2 rounded-md transition-all">
               Contact
             </Link>
@@ -164,7 +173,7 @@ const Header = () => {
                 </Link>
               </Button>
               <Button asChild className="bg-accent hover:bg-accent/90">
-                <a href="tel:3239477439">
+                <a href="tel:3238551752">
                   <Phone className="w-4 h-4 mr-2" />
                   Call Now
                 </a>
@@ -256,6 +265,9 @@ const Header = () => {
             <Link to="/services" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 text-foreground hover:text-accent hover:bg-accent/10 rounded-md transition-all px-3">
               Our Services
             </Link>
+            <Link to="/gallery" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 text-foreground hover:text-accent hover:bg-accent/10 rounded-md transition-all px-3">
+              Gallery
+            </Link>
             <Link to="/contact" onClick={() => setIsMenuOpen(false)} className="block w-full text-left py-2 text-foreground hover:text-accent hover:bg-accent/10 rounded-md transition-all px-3">
               Contact
             </Link>
@@ -266,7 +278,7 @@ const Header = () => {
               </Link>
             </Button>
             <Button asChild className="w-full bg-accent hover:bg-accent/90">
-              <a href="tel:3239477439">
+              <a href="tel:3238551752">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Now
               </a>

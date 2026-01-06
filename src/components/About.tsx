@@ -1,13 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Award, Clock, DollarSign, Timer } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const stats = [
-  { icon: Clock, label: "years of experience", value: "10+" },
-  { icon: DollarSign, label: "savings vs full replacement", value: "70%" },
-  { icon: Award, label: "completed projects", value: "200+" },
-  { icon: Timer, label: "project work hours", value: "1000+" },
-];
 
 const About = () => {
   return (
@@ -20,19 +12,19 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Welcome to <span className="font-semibold text-foreground">Gr8 Glaze Refinishing</span>, 
-                a professional refinishing company based in the San Fernando Valley, CA, specializing in bathtub and tile refinishing (reglazing) 
-                for both residential and commercial properties. We restore surfaces to look new using specialized coatings, 
-                highlighting quality, warranties, and cost-effectiveness compared to replacement.
+                My name is <span className="font-semibold text-foreground">Noe Pineda</span>, founder of <span className="font-semibold text-foreground">Gr8 Glaze Refinishing, Inc.</span>
               </p>
               <p>
-                Our mission is to help you save money and extend the life of your fixtures by repairing chips, changing colors, 
-                and updating dated surfaces. We use advanced techniques to chemically bond new finishes to old ones for maximum durability, 
-                creating a strong bond that lasts for years.
+                For years, I worked in the refinishing industry giving everything I had to my craft. I delivered quality work, paid attention to details, and took pride in every surface I refinished. But growth opportunities were never offered. Speed and sloppy work were preferred over doing the job right — and that never sat well with me.
               </p>
               <p>
-                We focus on providing cost-effective solutions that are cheaper than full replacement, environmentally friendly by extending 
-                the life of existing fixtures, and fast—transforming surfaces in hours, not weeks, with minimal disruption to your daily life.
+                After many years of learning the ropes, perfecting my skills, and understanding what truly makes a refinishing job last, I reached a turning point. I made one of the hardest decisions of my life — I quit my job and took a leap of faith.
+              </p>
+              <p>
+                That decision is how <span className="font-semibold text-foreground">Gr8 Glaze Refinishing</span> was born.
+              </p>
+              <p>
+                I started this company with one simple belief: <span className="font-semibold text-foreground">quality should never be rushed</span>. Every project deserves proper preparation, professional application, and attention to detail. I treat every home as if it were my own, because my name and reputation stand behind every job.
               </p>
             </div>
             <Button 
@@ -44,19 +36,16 @@ const About = () => {
             </Button>
           </div>
 
-          <div className="grid grid-cols-2 gap-6 animate-fade-in-up">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 text-center hover:shadow-lg transition-shadow"
-              >
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-primary-foreground" />
-                </div>
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
-            ))}
+          <div className="animate-fade-in-up flex justify-center lg:justify-end">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-shadow duration-300 max-w-[90%] lg:max-w-[85%]">
+              <img
+                src="/bathtub-refinishing.png"
+                alt="Bathtub Refinishing Before and After"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </div>
