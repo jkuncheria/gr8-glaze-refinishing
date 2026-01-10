@@ -1,8 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Home, Bath, UtensilsCrossed } from "lucide-react";
+import { Home, Bath, UtensilsCrossed, ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 const homePageServices = [
   {
@@ -30,50 +29,82 @@ const homePageServices = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-12 md:py-20 bg-secondary/30 scroll-mt-32">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 animate-fade-in">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Our Services</h2>
-          <p className="text-base md:text-lg text-muted-foreground px-2">
-            Professional bathtub and tile refinishing services designed to restore surfaces to look new
+    <section id="services" className="py-20 md:py-28 bg-gradient-to-b from-background via-muted/20 to-background scroll-mt-32 relative overflow-hidden">
+      {/* Decorative Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(202,167,98,0.08),transparent_50%)]" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
+            <Sparkles className="w-8 h-8 text-accent" />
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Our Services
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground">
+            Professional bathtub and tile refinishing services designed to restore surfaces to look brand new
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="mb-6 md:mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
             {homePageServices.map((service, index) => (
               <Card
                 key={index}
-                className="group overflow-hidden hover:shadow-xl transition-all duration-300 animate-fade-in-up border-0 flex flex-col"
+                className="group overflow-hidden hover:shadow-2xl transition-all duration-500 animate-fade-in-up border-2 border-border/50 hover:border-accent/50 flex flex-col bg-background hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden flex-shrink-0">
+                {/* Image Section */}
+                <div className="relative h-64 overflow-hidden flex-shrink-0 bg-muted/30">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     loading="lazy"
                     decoding="async"
                   />
-                </div>
-                <CardContent className="p-4 md:p-6 flex flex-col flex-grow">
-                  <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3">
-                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                      <service.icon className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-all duration-500"></div>
+                  
+                  {/* Icon Badge */}
+                  <div className="absolute top-6 right-6 z-20">
+                    <div className="w-16 h-16 rounded-2xl bg-background/95 backdrop-blur-sm shadow-lg border-2 border-accent/20 flex items-center justify-center group-hover:border-accent group-hover:bg-accent/10 transition-all duration-300 group-hover:scale-110">
+                      <service.icon className="w-8 h-8 text-accent group-hover:scale-110 transition-transform" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold text-foreground leading-tight">{service.title}</h3>
                   </div>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-4 flex-grow">{service.description}</p>
+                </div>
+
+                {/* Content Section */}
+                <CardContent className="p-8 flex flex-col flex-grow">
+                  {/* Title */}
+                  <div className="mb-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2 leading-tight">
+                      {service.title}
+                    </h3>
+                    <div className="w-16 h-1 bg-accent rounded-full"></div>
+                  </div>
+                  
+                  {/* Description */}
+                  <p className="text-base text-muted-foreground leading-relaxed mb-8 flex-grow">
+                    {service.description}
+                  </p>
+                  
+                  {/* CTA */}
                   {service.price && (
-                    <div className="mt-auto pt-4">
+                    <div className="mt-auto pt-6 border-t border-border/50">
                       {service.price === "Call for Free Quote" ? (
-                        <a href="tel:3238551752" className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20 hover:bg-secondary/70 transition-colors cursor-pointer">
-                          <span className="text-base md:text-lg font-semibold text-foreground">{service.price}</span>
+                        <a 
+                          href="tel:3238551752" 
+                          className="group/cta inline-flex items-center justify-center w-full gap-2 bg-accent/5 hover:bg-accent/10 rounded-xl px-6 py-4 border-2 border-accent/20 hover:border-accent transition-all duration-300 cursor-pointer"
+                        >
+                          <span className="text-base font-semibold text-accent group-hover/cta:text-accent transition-colors">
+                            {service.price}
+                          </span>
                         </a>
                       ) : (
-                        <div className="inline-flex items-baseline gap-1 bg-secondary/50 rounded-lg px-4 py-2.5 border-2 border-foreground/20">
-                          <span className="text-base md:text-lg font-semibold text-foreground">{service.price}</span>
+                        <div className="inline-flex items-center justify-center w-full gap-2 bg-accent/5 rounded-xl px-6 py-4 border-2 border-accent/20">
+                          <span className="text-base font-semibold text-foreground">{service.price}</span>
                         </div>
                       )}
                     </div>
@@ -86,10 +117,14 @@ const Services = () => {
 
         {/* See All Services Button */}
         <div className="text-center">
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-background">
+          <Button 
+            asChild 
+            size="lg" 
+            className="group bg-accent hover:bg-accent/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 px-10 py-7 rounded-xl font-semibold text-lg"
+          >
             <Link to="/services">
-              See All Services
-              <ArrowRight className="w-5 h-5 ml-2" />
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>

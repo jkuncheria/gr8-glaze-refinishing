@@ -98,10 +98,10 @@ const ContactForm = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
-              <Sparkles className="w-10 h-10 text-accent" />
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
+              <Sparkles className="w-8 h-8 text-accent" />
             </div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
               Get Your Free Consultation
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -320,7 +320,7 @@ const ContactForm = () => {
                           {uploadedFiles.map((file, index) => (
                             <div
                               key={index}
-                              className="flex items-center justify-between p-4 border-2 border-border/50 rounded-xl bg-gradient-to-r from-accent/5 to-background hover:from-accent/10 transition-all"
+                              className="flex items-center justify-between p-4 border-2 border-border/50 rounded-xl bg-accent/5 hover:bg-accent/10 transition-all"
                             >
                               <div className="flex items-center gap-3 flex-1 min-w-0">
                                 <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -349,7 +349,7 @@ const ContactForm = () => {
                       <Button 
                         type="submit" 
                         disabled={isSubmitting}
-                        className="w-full bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-background h-14 text-lg font-bold shadow-xl hover:shadow-2xl transition-all rounded-xl disabled:opacity-50 disabled:cursor-not-allowed group"
+                        className="w-full bg-accent hover:bg-accent/90 text-white h-14 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-xl disabled:opacity-50 disabled:cursor-not-allowed group"
                       >
                         {isSubmitting ? (
                           <>

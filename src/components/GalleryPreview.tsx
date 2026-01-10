@@ -30,14 +30,14 @@ const GalleryPreview = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(202,167,98,0.05),transparent_70%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
-            <Sparkles className="w-7 h-7 text-accent" />
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
+            <Sparkles className="w-8 h-8 text-accent" />
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 bg-gradient-to-r from-foreground via-foreground/90 to-foreground/80 bg-clip-text text-transparent">
-            Our <span className="text-primary">Work Gallery</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
+            Our Work Gallery
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             See the quality craftsmanship and beautiful transformations we've completed for homeowners throughout Los Angeles
           </p>
         </div>
@@ -177,10 +177,14 @@ const GalleryPreview = () => {
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" className="bg-gradient-to-r from-accent to-accent/90 hover:from-accent/90 hover:to-accent text-background shadow-xl hover:shadow-2xl transition-all hover:scale-105 px-8 py-6 text-lg font-semibold">
+          <Button 
+            asChild 
+            size="lg" 
+            className="group bg-accent hover:bg-accent/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 px-10 py-7 rounded-xl font-semibold text-lg"
+          >
             <Link to="/gallery">
               View Full Gallery
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
         </div>
