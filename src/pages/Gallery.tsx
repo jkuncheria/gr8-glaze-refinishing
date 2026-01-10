@@ -217,7 +217,7 @@ const Gallery = () => {
                                   >
                                     <img
                                       src={`/full-gallery/${imageName}`}
-                                      alt={`Project ${project.projectNumber} before ${index + 1}`}
+                                      alt={`Bathtub refinishing before transformation - Project ${project.projectNumber} - Los Angeles refinishing service`}
                                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                       loading="lazy"
                                       decoding="async"
@@ -267,7 +267,7 @@ const Gallery = () => {
                                   >
                                     <img
                                       src={`/full-gallery/${imageName}`}
-                                      alt={`Project ${project.projectNumber} after ${index + 1}`}
+                                      alt={`Bathtub refinishing after transformation - Project ${project.projectNumber} - Los Angeles refinishing service`}
                                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                       loading="lazy"
                                       decoding="async"

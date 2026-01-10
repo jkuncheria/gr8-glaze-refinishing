@@ -24,8 +24,8 @@ import { getBreadcrumbSchema } from "@/lib/structuredData";
 
 const GlazeGuardPro = () => {
   const breadcrumbSchema = getBreadcrumbSchema([
-    { name: "Home", url: "https://www.resurfacega.com/" },
-    { name: "GlazeGuard Pro", url: "https://www.resurfacega.com/glazeguard-pro" }
+    { name: "Home", url: "https://www.gr8glazerefinishing.com/" },
+    { name: "GlazeGuard Pro", url: "https://www.gr8glazerefinishing.com/glazeguard-pro" }
   ]);
 
   const technicalBullets = [

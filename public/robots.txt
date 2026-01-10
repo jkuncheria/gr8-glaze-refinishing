@@ -1,5 +1,5 @@
 # Robots.txt for Gr8 Glaze Refinishing
-# https://www.resurfacega.com
+# https://www.gr8glazerefinishing.com
 
 # Allow all search engines
 User-agent: *
@@ -11,7 +11,7 @@ Disallow: /api/
 Disallow: /*.json$
 
 # Sitemap location
-Sitemap: https://www.resurfacega.com/sitemap.xml
+Sitemap: https://www.gr8glazerefinishing.com/sitemap.xml
 
 # Crawl-delay (optional, helps prevent server overload)
 Crawl-delay: 1

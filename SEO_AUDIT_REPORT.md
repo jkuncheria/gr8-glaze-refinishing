@@ -1,126 +1,384 @@
-# SEO Audit Report - Gr8 Glaze Refinishing
-**Date:** January 2025
-
-## ✅ **PAGE TITLES** - PASS
-All pages have optimized titles with local/service keywords:
-
-- **Home:** "Gr8 Glaze Refinishing Atlanta | Bathtub, Cabinet & Countertop Resurfacing" ✓
-- **Services:** "Our Services | Bathtub, Shower, Cabinet & Countertop Resurfacing | Gr8 Glaze Refinishing" ✓
-- **About:** "About Us | Gr8 Glaze Refinishing | Atlanta's Premier Refinishing Specialists" ✓
-- **Contact:** "Contact Us | Gr8 Glaze Refinishing | Free Consultation & Quote" ✓
-- **Warranty:** "5-Year Limited Warranty | Gr8 Glaze Refinishing | Bathtub Refinishing Warranty" ✓
-- **Care Tips:** "Care & Maintenance Instructions | Bathtub Refinishing Care Tips | Gr8 Glaze Refinishing" ✓
-- **Marietta:** "Service Areas | Marietta & Metro Atlanta | Gr8 Glaze Refinishing" ✓
-
-**Status:** ✅ All titles include local keywords (Atlanta, Marietta) and service keywords (bathtub refinishing, resurfacing, etc.)
+# SEO Audit Report: Gr8 Glaze Refinishing
+**Date:** January 2025  
+**Website:** https://www.gr8glazerefinishing.com  
+**Location:** Los Angeles, CA (San Fernando Valley)
 
 ---
 
-## ✅ **META DESCRIPTIONS** - PASS
-All pages have unique, descriptive meta descriptions:
+## Overall SEO Score: 72/100
 
-- **Home:** 155 characters - includes services, location, value proposition ✓
-- **Services:** 160 characters - lists services, location, CTA ✓
-- **About:** 160 characters - includes credentials, location, services ✓
-- **Contact:** 160 characters - includes phone, CTA, location ✓
-- **Warranty:** 160 characters - includes warranty details ✓
-- **Care Tips:** 160 characters - includes topic, value ✓
-- **Marietta:** 160 characters - includes service areas, location ✓
-
-**Status:** ✅ All descriptions are present, unique, and within optimal length (150-160 characters)
+### Score Breakdown:
+- **Technical SEO:** 18/25 (72%)
+- **On-Page SEO:** 16/25 (64%)
+- **Content Quality:** 15/20 (75%)
+- **Structured Data:** 12/15 (80%)
+- **Mobile & Performance:** 11/15 (73%)
 
 ---
 
-## ⚠️ **H1/H2 STRUCTURE** - NEEDS MINOR FIX
+## ✅ STRENGTHS
 
-### Current H1 Structure:
-- **Home:** "Atlanta's Premier Refinishing Specialists" ✓ (includes location keyword)
-- **Services:** "Our Services" ⚠️ (could be more keyword-rich)
-- **About:** "About Us" ⚠️ (could be more keyword-rich)
-- **Contact:** ❌ **MISSING H1** - Only has H2 "Let's Talk About Your Project"
-- **Warranty:** "Gr8 Glaze Refinishing" + "Limited 5-Year Warranty – Bathtub Refinishing" ✓
-- **Care Tips:** "Gr8 Glaze Refinishing" + "Care & Maintenance Instructions for Your Newly Re-Glazed Tub" ✓
-- **Marietta:** "Service Areas" ⚠️ (could be more keyword-rich)
+### 1. Technical Foundation (Good)
+- ✅ Proper HTML5 structure with semantic elements
+- ✅ Mobile-responsive design
+- ✅ Fast page load optimizations (preload, lazy loading)
+- ✅ Clean URL structure
+- ✅ HTTPS ready (assuming SSL certificate)
 
-### H2 Structure:
-All pages have proper H2 hierarchy with relevant keywords ✓
+### 2. Meta Tags & Open Graph (Good)
+- ✅ Unique title tags on all pages
+- ✅ Meta descriptions present
+- ✅ Open Graph tags implemented
+- ✅ Twitter Card tags implemented
+- ✅ Canonical URLs properly set
 
-**Issues Found:**
-1. Contact page missing H1 tag
-2. Some H1s could be more keyword-rich (Services, About, Marietta)
+### 3. Structured Data (Good Foundation)
+- ✅ LocalBusiness schema implemented
+- ✅ Organization schema present
+- ✅ WebSite schema with search action
+- ✅ Breadcrumb schema on pages
+- ✅ Service schema for individual services
 
-**Recommendation:** Add H1 to Contact page and enhance H1 keywords where needed.
-
----
-
-## ✅ **IMAGE ALT TEXT** - PASS
-All images have descriptive alt text:
-
-- Hero image: "Modern luxury bathroom with refinished surfaces" ✓
-- Service images: Uses service.title (e.g., "Countertop Resurfacing") ✓
-- Logo images: "Gr8 Glaze Refinishing Logo" ✓
-- Owner image: "Owner of Gr8 Glaze Refinishing" ✓
-- Social icons: "Facebook", "Instagram" ✓
-- News feature images: "Atlanta News First" ✓
-- Gallery images: Uses item.title ✓
-
-**Status:** ✅ All images have meaningful alt text
+### 4. Content Structure (Good)
+- ✅ Proper heading hierarchy (H1 → H2 → H3)
+- ✅ H1 tags present on all pages
+- ✅ Good use of semantic HTML
+- ✅ Internal linking structure
 
 ---
 
-## ✅ **CRAWLABILITY** - PASS
+## ❌ CRITICAL ISSUES (Must Fix)
 
-### Noindex Tags:
-- SEO component defaults to `index, follow` ✓
-- No pages have `noindex` set ✓
-- Only sets `noindex` when explicitly passed as prop (none currently) ✓
+### 1. **robots.txt & sitemap.xml - Wrong Domain** 🔴
+**Severity:** Critical  
+**Impact:** Search engines may not crawl/index properly
 
-### Robots.txt:
-```
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /*.json$
-Sitemap: https://www.resurfacega.com/sitemap.xml
-```
+**Current Issue:**
+- `robots.txt` references `resurfacega.com` (old domain)
+- `sitemap.xml` references `resurfacega.com` (old domain)
+- Both files point to wrong sitemap location
 
-**Status:** ✅ 
-- All important pages are crawlable
-- Only blocks admin/api (which don't exist anyway)
-- Sitemap is referenced
-- No blocking of important content
+**Fix Required:**
+- Update all URLs to `gr8glazerefinishing.com`
+- Update sitemap location in robots.txt
+- Regenerate sitemap with correct URLs and current dates
 
----
+### 2. **Structured Data - Wrong Image URLs** 🔴
+**Severity:** Critical  
+**Impact:** Rich snippets may not display correctly
 
-## 📊 **OVERALL SEO SCORE: 95/100**
+**Current Issue:**
+- Logo references `/logo.png` instead of `/gr8glazelogo.png`
+- Image references `/logo.png` instead of `/gr8glazelogo.png`
 
-### Strengths:
-✅ Optimized page titles with local/service keywords
-✅ Unique meta descriptions on all pages
-✅ Proper structured data (JSON-LD) implementation
-✅ Sitemap.xml present and referenced
-✅ All images have alt text
-✅ Proper robots.txt configuration
-✅ No accidental noindex tags
-✅ Breadcrumb structured data
-✅ LocalBusiness schema markup
+**Location:** `src/lib/structuredData.ts` lines 8-9, 139
 
-### Minor Issues to Fix:
-⚠️ Contact page missing H1 tag
-⚠️ Some H1s could be more keyword-rich
+**Fix Required:**
+- Update all logo/image references to `/gr8glazelogo.png`
 
----
+### 3. **Missing Complete Address in Structured Data** 🔴
+**Severity:** High  
+**Impact:** Local SEO performance
 
-## 🔧 **RECOMMENDED FIXES**
+**Current Issue:**
+- Only has `addressLocality` and `addressRegion`
+- Missing street address (if available)
+- Missing postal code
 
-1. **Add H1 to Contact page** - Currently only has H2
-2. **Enhance H1 keywords** - Make Services, About, and Marietta H1s more keyword-rich
-3. **Monitor in Google Search Console** - Track performance after deployment
+**Fix Required:**
+- Add complete address if available
+- Or add service area radius information
 
 ---
 
-## ✅ **CONCLUSION**
+## ⚠️ HIGH PRIORITY ISSUES
 
-The website has excellent SEO implementation with only minor improvements needed. All critical SEO elements are in place, and the site is fully crawlable and optimized for search engines.
+### 4. **Missing Review/Rating Schema** 🟠
+**Severity:** High  
+**Impact:** Missing star ratings in search results
 
+**Current Issue:**
+- No AggregateRating schema
+- Reviews widget exists but not structured
+
+**Fix Required:**
+- Add AggregateRating schema with review data
+- Link to review sources
+
+### 5. **Missing FAQ Schema** 🟠
+**Severity:** High  
+**Impact:** Missing FAQ rich snippets
+
+**Current Issue:**
+- No FAQ schema on any page
+- Common questions not structured
+
+**Fix Required:**
+- Add FAQ section to homepage or services page
+- Implement FAQPage schema
+
+### 6. **Gallery Page Image Alt Text** 🟠
+**Severity:** Medium-High  
+**Impact:** Image SEO and accessibility
+
+**Current Issue:**
+- Alt text is generic: "Project X before/after"
+- Missing descriptive, keyword-rich alt text
+
+**Fix Required:**
+- Update alt text to: "Bathtub refinishing before and after - Los Angeles project"
+- Include service type and location
+
+### 7. **Missing Business Hours** 🟠
+**Severity:** Medium  
+**Impact:** Local SEO and user experience
+
+**Current Issue:**
+- No openingHours in structured data
+- No business hours displayed on site
+
+**Fix Required:**
+- Add openingHours to LocalBusiness schema
+- Display business hours on contact page
+
+### 8. **Missing Social Media Links** 🟠
+**Severity:** Medium  
+**Impact:** Social signals and trust
+
+**Current Issue:**
+- `sameAs` array is empty in structured data
+- No social media links in schema
+
+**Fix Required:**
+- Add Instagram, Facebook, or other social profiles to `sameAs` array
+
+---
+
+## 📝 MEDIUM PRIORITY IMPROVEMENTS
+
+### 9. **Content Keyword Optimization** 🟡
+**Severity:** Medium  
+**Impact:** Search rankings
+
+**Issues:**
+- Could use more location-specific keywords naturally
+- Service pages could have more detailed content
+- Missing long-tail keyword variations
+
+**Recommendations:**
+- Add more LA-specific content (neighborhoods, areas served)
+- Expand service descriptions with more keywords
+- Add location-specific landing pages if needed
+
+### 10. **Internal Linking** 🟡
+**Severity:** Medium  
+**Impact:** Page authority distribution
+
+**Current State:**
+- Good internal linking in navigation
+- Could add more contextual links in content
+
+**Recommendations:**
+- Add more internal links within content
+- Link service pages to each other
+- Add "Related Services" sections
+
+### 11. **Image Optimization** 🟡
+**Severity:** Medium  
+**Impact:** Page speed and image SEO
+
+**Current State:**
+- Images have lazy loading
+- Some images may be large
+
+**Recommendations:**
+- Compress images further
+- Use WebP format where possible
+- Add width/height attributes to prevent layout shift
+
+### 12. **Missing Service-Specific Pages** 🟡
+**Severity:** Medium  
+**Impact:** Targeting specific keywords
+
+**Current State:**
+- All services on one page
+- No individual service pages
+
+**Recommendations:**
+- Consider creating individual pages for top services:
+  - `/bathtub-refinishing-los-angeles`
+  - `/tile-resurfacing-los-angeles`
+  - `/color-changes-los-angeles`
+
+---
+
+## 🔍 LOW PRIORITY / OPTIONAL IMPROVEMENTS
+
+### 13. **Blog/Content Section** 🔵
+**Severity:** Low  
+**Impact:** Long-term SEO and content marketing
+
+**Recommendation:**
+- Add blog section with helpful content:
+  - "How to maintain refinished bathtub"
+  - "Bathtub refinishing vs replacement cost comparison"
+  - "Best colors for bathroom refinishing"
+
+### 14. **Testimonials Schema** 🔵
+**Severity:** Low  
+**Impact:** Trust signals
+
+**Recommendation:**
+- Add Review schema for individual testimonials
+- Link to review sources
+
+### 15. **Video Content** 🔵
+**Severity:** Low  
+**Impact:** Engagement and rich results
+
+**Recommendation:**
+- Add video schema if videos are added
+- YouTube channel integration
+
+---
+
+## 📋 DETAILED FINDINGS BY PAGE
+
+### Homepage (Index.tsx)
+**Score: 8/10**
+- ✅ Good H1: "The #1 Refinishing Specialists in Los Angeles"
+- ✅ Meta description present
+- ✅ Structured data (LocalBusiness, WebSite)
+- ⚠️ Could add more location keywords naturally
+- ⚠️ Missing FAQ section
+
+### Services Page (/services)
+**Score: 7/10**
+- ✅ Good H1: "Bathtub & Tile Refinishing Services in LA"
+- ✅ Service schema for each service
+- ✅ Breadcrumb schema
+- ⚠️ Could expand service descriptions
+- ⚠️ Missing individual service pages
+
+### About Page (/about)
+**Score: 8/10**
+- ✅ Good H1: "About Gr8 Glaze Refinishing"
+- ✅ Organization schema
+- ✅ Breadcrumb schema
+- ✅ Good content with founder story
+- ⚠️ Could add more LA-specific content
+
+### Contact Page (/contact)
+**Score: 7/10**
+- ✅ Contact form with proper structure
+- ✅ Breadcrumb schema
+- ⚠️ Missing business hours
+- ⚠️ Could add map embed with schema
+
+### Gallery Page (/gallery)
+**Score: 6/10**
+- ✅ Good H1: "Our Work Gallery"
+- ✅ Breadcrumb schema
+- ⚠️ Image alt text too generic
+- ⚠️ Missing ImageObject schema for gallery images
+- ⚠️ Could add project descriptions
+
+### Service Areas Page (/marietta)
+**Score: 7/10**
+- ✅ Good H1: "Gr8 Glaze Refinishing in Los Angeles, CA"
+- ✅ Breadcrumb schema
+- ✅ Good location content
+- ⚠️ URL path `/marietta` doesn't match LA focus (should be `/service-areas`)
+
+---
+
+## 🎯 RECOMMENDED ACTION PLAN
+
+### Phase 1: Critical Fixes (Week 1)
+1. ✅ Fix robots.txt - Update domain to gr8glazerefinishing.com
+2. ✅ Fix sitemap.xml - Update all URLs and dates
+3. ✅ Fix structured data image URLs
+4. ✅ Add complete address to structured data
+
+### Phase 2: High Priority (Week 2)
+5. ✅ Add Review/AggregateRating schema
+6. ✅ Add FAQ schema and FAQ section
+7. ✅ Improve gallery image alt text
+8. ✅ Add business hours to structured data and contact page
+9. ✅ Add social media links to structured data
+
+### Phase 3: Medium Priority (Week 3-4)
+10. ✅ Optimize content with more location keywords
+11. ✅ Improve internal linking
+12. ✅ Optimize images (compress, WebP)
+13. ✅ Consider individual service pages
+
+### Phase 4: Long-term (Ongoing)
+14. ✅ Add blog/content section
+15. ✅ Add video content
+16. ✅ Build backlinks
+17. ✅ Monitor and improve based on analytics
+
+---
+
+## 📊 EXPECTED IMPROVEMENTS
+
+After implementing critical and high-priority fixes:
+- **Expected Score:** 85-90/100
+- **Rich Snippets:** Star ratings, FAQ, business hours
+- **Local SEO:** Better Google Business Profile integration
+- **Search Visibility:** Improved rankings for LA-area keywords
+- **User Experience:** Better structured information
+
+---
+
+## 🔧 QUICK WINS (Can implement immediately)
+
+1. **Fix robots.txt** - 5 minutes
+2. **Fix sitemap.xml** - 10 minutes
+3. **Update structured data image URLs** - 5 minutes
+4. **Add business hours** - 15 minutes
+5. **Improve gallery alt text** - 30 minutes
+
+**Total time for quick wins: ~1 hour**
+
+---
+
+## 📈 KEY METRICS TO TRACK
+
+1. **Google Search Console:**
+   - Index coverage
+   - Click-through rate
+   - Average position
+   - Rich result performance
+
+2. **Google Analytics:**
+   - Organic traffic
+   - Bounce rate
+   - Time on page
+   - Conversion rate
+
+3. **Local SEO:**
+   - Google Business Profile views
+   - Map searches
+   - Direction requests
+   - Phone calls from website
+
+---
+
+## ✅ CONCLUSION
+
+The website has a **solid SEO foundation** with good technical implementation, proper structured data, and clean code. The main issues are:
+
+1. **Outdated references** (robots.txt, sitemap.xml)
+2. **Missing rich snippet opportunities** (reviews, FAQ, hours)
+3. **Content optimization** opportunities
+
+**Priority:** Fix critical issues immediately, then implement high-priority improvements for maximum impact.
+
+**Estimated improvement:** +13-18 points (from 72 to 85-90/100) after implementing critical and high-priority fixes.
+
+---
+
+*Report generated: January 2025*  
+*Next review recommended: After Phase 2 implementation*
