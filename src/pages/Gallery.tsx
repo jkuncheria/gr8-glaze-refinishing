@@ -149,9 +149,9 @@ const Gallery = () => {
         structuredData={breadcrumbSchema}
       />
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section className="relative py-24 md:py-32 overflow-hidden">
+        <section className="relative pt-8 pb-24 md:pt-12 md:pb-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-primary/5 to-accent/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(202,167,98,0.1),transparent_50%)]" />
           <div className="container mx-auto px-4 relative z-10">

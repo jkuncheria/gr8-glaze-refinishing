@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Clock, DollarSign, Timer, Phone } from "lucide-react";
+import { Award, Clock, DollarSign, Timer, Phone, Sparkles, Quote } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema, getOrganizationSchema } from "@/lib/structuredData";
@@ -55,60 +55,77 @@ const About = () => {
         structuredData={structuredData}
       />
       <Header />
-      <main className="pt-20">
+      <main>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-          <div className="container mx-auto px-4">
+        <section className="pt-8 pb-20 md:pt-12 md:pb-28 bg-gradient-to-b from-background via-muted/20 to-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(202,167,98,0.08),transparent_50%)]" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
-                About Gr8 Glaze Refinishing | LA's Premier Bathtub & Tile Refinishing Specialists
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
+                <Sparkles className="w-8 h-8 text-accent" />
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+                About Gr8 Glaze Refinishing
               </h1>
+              <p className="text-lg md:text-xl text-muted-foreground">
+                LA's Premier Bathtub & Tile Refinishing Specialists
+              </p>
             </div>
           </div>
         </section>
 
         {/* Main Content */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4">
+        <section className="py-20 md:py-28 bg-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(202,167,98,0.06),transparent_60%)]" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto">
               {/* About Us Section */}
               <div className="mb-16">
-                <div className="mb-8">
-                  <h2 className="text-2xl md:text-3xl font-bold mb-6">
-                    ABOUT US
-                  </h2>
-                  <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                    <p>
-                      My name is <span className="font-semibold text-foreground">Noe Pineda</span>, founder of <span className="font-semibold text-foreground">Gr8 Glaze Refinishing, Inc.</span>
-                    </p>
-                    <p>
-                      For years, I worked in the refinishing industry giving everything I had to my craft. I delivered quality work, paid attention to details, and took pride in every surface I refinished. But growth opportunities were never offered. Speed and sloppy work were preferred over doing the job right — and that never sat well with me.
-                    </p>
-                    <p>
-                      After many years of learning the ropes, perfecting my skills, and understanding what truly makes a refinishing job last, I reached a turning point. I made one of the hardest decisions of my life — I quit my job and took a leap of faith.
-                    </p>
-                    <p>
-                      That decision is how <span className="font-semibold text-foreground">Gr8 Glaze Refinishing</span> was born.
-                    </p>
-                    <p>
-                      I started this company with one simple belief: <span className="font-semibold text-foreground">quality should never be rushed</span>. Every project deserves proper preparation, professional application, and attention to detail. I treat every home as if it were my own, because my name and reputation stand behind every job.
-                    </p>
-                    <p>
-                      I'm still learning and growing every day, and I take pride in improving with each project. This journey has been built on hard work, honesty, and passion for the trade — and I'm grateful for every customer who allows me to do what I love.
-                    </p>
-                    <p className="text-xl font-semibold text-foreground italic">
-                      Another day. Another spray. Another job done right.
-                    </p>
+                <div className="mb-12">
+                  <div className="inline-flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center shadow-lg">
+                      <Sparkles className="w-6 h-6 text-accent" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-display font-bold">
+                      Our Story
+                    </h2>
+                  </div>
+                  
+                  <div className="relative pl-6 border-l-4 border-accent/30">
+                    <Quote className="absolute -top-2 -left-2 w-8 h-8 text-accent/20" />
+                    <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
+                      <p>
+                        My name is <span className="font-semibold text-foreground">Noe Pineda</span>, founder of <span className="font-semibold text-foreground">Gr8 Glaze Refinishing, Inc.</span>
+                      </p>
+                      <p>
+                        For years, I worked in the refinishing industry giving everything I had to my craft. I delivered quality work, paid attention to details, and took pride in every surface I refinished. But growth opportunities were never offered. Speed and sloppy work were preferred over doing the job right — and that never sat well with me.
+                      </p>
+                      <p>
+                        After many years of learning the ropes, perfecting my skills, and understanding what truly makes a refinishing job last, I reached a turning point. I made one of the hardest decisions of my life — I quit my job and took a leap of faith.
+                      </p>
+                      <p className="text-foreground font-medium">
+                        That decision is how <span className="font-semibold text-accent">Gr8 Glaze Refinishing</span> was born.
+                      </p>
+                      <p>
+                        I started this company with one simple belief: <span className="font-semibold text-accent">quality should never be rushed</span>. Every project deserves proper preparation, professional application, and attention to detail. I treat every home as if it were my own, because my name and reputation stand behind every job.
+                      </p>
+                      <p>
+                        I'm still learning and growing every day, and I take pride in improving with each project. This journey has been built on hard work, honesty, and passion for the trade — and I'm grateful for every customer who allows me to do what I love.
+                      </p>
+                      <p className="text-xl font-semibold text-foreground italic pt-4">
+                        Another day. Another spray. Another job done right.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="text-center mt-8">
+                <div className="text-center mt-10">
                   <Button 
                     size="lg" 
                     onClick={scrollToContact}
-                    className="bg-accent hover:bg-accent/90 text-background"
+                    className="bg-accent hover:bg-accent/90 text-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 px-10 py-7 rounded-xl font-semibold text-lg"
                   >
                     <Phone className="w-5 h-5 mr-2" />
-                    Call Now
+                    Get Your Free Consultation
                   </Button>
                 </div>
               </div>
@@ -118,12 +135,15 @@ const About = () => {
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
-                    <Card key={index} className="border-0 shadow-lg text-center">
+                    <Card key={index} className="border-2 border-border/50 hover:border-accent/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-center bg-background">
                       <CardContent className="p-6">
+                        <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                          <Icon className="w-6 h-6 text-accent" />
+                        </div>
                         <div className="text-4xl md:text-5xl font-bold text-foreground mb-2">
                           {stat.value}
                         </div>
-                        <div className="h-1 w-12 bg-accent mx-auto mb-3" />
+                        <div className="h-1 w-12 bg-accent mx-auto mb-3 rounded-full" />
                         <div className="text-sm text-muted-foreground uppercase tracking-wide">
                           {stat.label}
                         </div>
@@ -137,14 +157,18 @@ const About = () => {
         </section>
 
         {/* Instagram Feed Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 via-background to-muted/20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(202,167,98,0.05),transparent_70%)]" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12 animate-fade-in">
-                <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+              <div className="text-center mb-16 animate-fade-in">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl mb-6 shadow-lg">
+                  <Sparkles className="w-8 h-8 text-accent" />
+                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
                   Follow Our Work
                 </h2>
-                <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                   See our latest refinishing projects and transformations on Instagram
                 </p>
               </div>

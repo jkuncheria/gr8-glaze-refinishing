@@ -21,7 +21,7 @@ const Contact = () => {
         structuredData={breadcrumbSchema}
       />
       <Header />
-      <main className="flex-grow pt-20">
+      <main className="flex-grow">
         <ContactForm />
         
         {/* Contact Information Tiles */}

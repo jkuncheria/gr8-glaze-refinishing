@@ -1,7 +1,7 @@
 // RenoLens API integration utilities
 
 const RENOLENS_API_BASE = 'https://www.renolens.com/api';
-const CLIENT_ID = 'RL-J4T94WXH';
+const CLIENT_ID = 'RL-P473UVBF';
 
 /**
  * Upload a file to RenoLens

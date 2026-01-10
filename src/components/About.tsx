@@ -10,8 +10,28 @@ const About = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Image */}
+          <div className="animate-fade-in flex justify-center lg:justify-start">
+            <div className="relative group max-w-[90%] lg:max-w-[85%]">
+              {/* Decorative Elements */}
+              <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="absolute -inset-2 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl"></div>
+              
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02]">
+                <img
+                  src="/bathtub-refinishing.png"
+                  alt="Bathtub Refinishing Before and After"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              </div>
+            </div>
+          </div>
+
           {/* Content */}
-          <div className="animate-fade-in space-y-6">
+          <div className="animate-fade-in-up space-y-6">
             <div className="inline-flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 flex items-center justify-center shadow-lg">
                 <Sparkles className="w-6 h-6 text-accent" />
@@ -52,26 +72,6 @@ const About = () => {
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
-          </div>
-
-          {/* Image */}
-          <div className="animate-fade-in-up flex justify-center lg:justify-end">
-            <div className="relative group max-w-[90%] lg:max-w-[85%]">
-              {/* Decorative Elements */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="absolute -inset-2 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl"></div>
-              
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02]">
-                <img
-                  src="/bathtub-refinishing.png"
-                  alt="Bathtub Refinishing Before and After"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

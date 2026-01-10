@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone, Sparkles, CheckCircle2 } from "lucide-react";
-import heroImage from "@/assets/hero-bathroom.jpeg";
+import { ArrowRight, Phone, Sparkles } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -22,7 +21,7 @@ const Hero = () => {
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src={heroImage}
+          src="/heroback.png"
           alt="Modern luxury bathroom with refinished surfaces"
           className="w-full h-full object-cover scale-105 transition-transform duration-[20s] ease-out hover:scale-100"
           loading="eager"
@@ -34,22 +33,16 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-32 md:pt-40 pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-12 md:pt-16 pb-20">
         <div className="max-w-5xl mx-auto">
           <div className="text-center space-y-8 mb-12">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-4 animate-fade-in">
-              <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-sm font-semibold text-background">Los Angeles' Trusted Refinishing Experts</span>
-            </div>
-
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-background leading-[1.1] mb-6 animate-fade-in-up">
-              Transform Your Space with Professional Refinishing
+              The #1 Refinishing<br />
+              <span className="pl-8 md:pl-12 lg:pl-16">Specialists in Los Angeles</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-background/90 max-w-3xl mx-auto font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-              Professional bathtub and tile refinishing services in Los Angeles. 
-              Restore surfaces to look brand new with specialized coatings—a cost-effective alternative to replacement.
+              Professional bathtub and tile refinishing services. Restore surfaces to look brand new.
             </p>
           </div>
 
@@ -73,21 +66,6 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            {[
-              { icon: CheckCircle2, text: "Free Consultations" },
-              { icon: CheckCircle2, text: "Quality Warranties" },
-              { icon: CheckCircle2, text: "Same-Day Service" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 bg-background/10 backdrop-blur-sm rounded-xl px-4 py-3 border border-background/20">
-                <div className="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-5 h-5 text-accent" />
-                </div>
-                <span className="text-sm font-medium text-background">{item.text}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

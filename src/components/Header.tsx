@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, ChevronDown, Calendar } from "lucide-react";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
@@ -34,7 +34,7 @@ const Header = () => {
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
-        const headerHeight = 120;
+        const headerHeight = 140; // Updated for two-row header layout
         const elementPosition = element.getBoundingClientRect().top;
         const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -75,34 +75,85 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    <header className={`relative z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-white/98 backdrop-blur-md shadow-lg border-b border-accent/10' 
         : 'bg-white/90 backdrop-blur-sm border-b border-transparent'
     }`}>
       <nav className="container mx-auto px-4 lg:px-6">
-        <div className="flex items-center justify-between h-20 lg:h-24">
-          {/* Logo */}
+        {/* Mobile Layout */}
+        <div className="lg:hidden flex items-center justify-between h-20">
+          {/* Mobile: Call Button */}
+          <Button 
+            asChild 
+            size="sm"
+            className="bg-accent hover:bg-accent/90 text-white shadow-md hover:shadow-lg transition-all duration-300 font-semibold px-4"
+          >
+            <a href="tel:3238551752">
+              <Phone className="w-4 h-4 mr-1.5" />
+              <span className="text-xs">Call</span>
+            </a>
+          </Button>
+
+          {/* Mobile: Centered Logo */}
           <Link 
             to="/" 
             onClick={handleLogoClick} 
-            className="flex items-center group relative z-10"
+            className="flex items-center group absolute left-1/2 -translate-x-1/2"
           >
             <div className="relative">
               <img 
                 src="/gr8glazelogo.png" 
                 alt="Gr8 Glaze Refinishing Logo" 
-                className="h-14 lg:h-16 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-14 object-contain transition-transform duration-300 group-hover:scale-105"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-accent/10 group-hover:to-accent/5 transition-all duration-300 rounded-lg blur-sm"></div>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-1">
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2.5 rounded-lg hover:bg-accent/10 transition-colors relative z-20"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Layout */}
+        <div className="hidden lg:block">
+          {/* Logo Row - Centered */}
+          <div className="flex justify-center items-center py-4">
+            <Link 
+              to="/" 
+              onClick={handleLogoClick} 
+              className="flex items-center group"
+            >
+              <div className="relative">
+                <img 
+                  src="/gr8glazelogo.png" 
+                  alt="Gr8 Glaze Refinishing Logo" 
+                  className="h-16 lg:h-20 object-contain transition-transform duration-300 group-hover:scale-105"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/0 to-accent/0 group-hover:from-accent/5 group-hover:via-accent/10 group-hover:to-accent/5 transition-all duration-300 rounded-lg blur-sm"></div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Navigation Row */}
+          <div className="relative flex items-center justify-center pb-4">
+            {/* Desktop Navigation - Centered */}
+            <div className="flex items-center gap-6">
             <Link 
               to="/" 
               onClick={(e) => {
@@ -111,7 +162,7 @@ const Header = () => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }
               }}
-              className={`relative px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
+              className={`relative px-5 py-3 text-base font-medium transition-all duration-200 ${
                 location.pathname === "/" 
                   ? 'text-accent' 
                   : 'text-foreground/70 hover:text-foreground'
@@ -125,13 +176,13 @@ const Header = () => {
             </Link>
             
             <DropdownMenu>
-              <DropdownMenuTrigger className={`px-4 py-2.5 text-sm font-medium transition-all duration-200 flex items-center gap-1.5 outline-none ${
+              <DropdownMenuTrigger className={`px-5 py-3 text-base font-medium transition-all duration-200 flex items-center gap-2 outline-none ${
                 location.pathname.startsWith("/about") || location.pathname === "/marietta"
                   ? 'text-accent' 
                   : 'text-foreground/70 hover:text-foreground'
               }`}>
                 <span>About</span>
-                <ChevronDown className="w-3.5 h-3.5 transition-transform duration-200" />
+                <ChevronDown className="w-4 h-4 transition-transform duration-200" />
                 <span className="absolute inset-0 bg-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-200 rounded-md"></span>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start" className="w-52 mt-2 border-accent/10 shadow-xl">
@@ -150,7 +201,7 @@ const Header = () => {
             
             <Link 
               to="/services" 
-              className={`relative px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
+              className={`relative px-5 py-3 text-base font-medium transition-all duration-200 ${
                 location.pathname === "/services" 
                   ? 'text-accent' 
                   : 'text-foreground/70 hover:text-foreground'
@@ -165,7 +216,7 @@ const Header = () => {
             
             <Link 
               to="/gallery" 
-              className={`relative px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
+              className={`relative px-5 py-3 text-base font-medium transition-all duration-200 ${
                 location.pathname === "/gallery" 
                   ? 'text-accent' 
                   : 'text-foreground/70 hover:text-foreground'
@@ -180,7 +231,7 @@ const Header = () => {
             
             <Link 
               to="/contact" 
-              className={`relative px-4 py-2.5 text-sm font-medium transition-all duration-200 ${
+              className={`relative px-5 py-3 text-base font-medium transition-all duration-200 ${
                 location.pathname === "/contact" 
                   ? 'text-accent' 
                   : 'text-foreground/70 hover:text-foreground'
@@ -192,55 +243,21 @@ const Header = () => {
               )}
               <span className="absolute inset-0 bg-accent/5 opacity-0 hover:opacity-100 transition-opacity duration-200 rounded-md"></span>
             </Link>
+            </div>
+
+            {/* Desktop CTA Button - Positioned absolutely on the right */}
+            <div className="absolute right-0 flex items-center">
+              <Button 
+                asChild 
+                className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6"
+              >
+                <a href="tel:3238551752">
+                  <Phone className="w-4 h-4 mr-2" />
+                  (323) 855-1752
+                </a>
+              </Button>
+            </div>
           </div>
-
-          {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <Button 
-              asChild 
-              variant="ghost"
-              className="text-foreground/70 hover:text-accent hover:bg-accent/5 border-0"
-            >
-              <Link to="/contact">
-                <Calendar className="w-4 h-4 mr-2" />
-                <span className="font-medium">Book Meeting</span>
-              </Link>
-            </Button>
-            <Button 
-              asChild 
-              className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 font-semibold px-6"
-            >
-              <a href="tel:3238551752">
-                <Phone className="w-4 h-4 mr-2" />
-                (323) 855-1752
-              </a>
-            </Button>
-          </div>
-
-          {/* Mobile: Call Button */}
-          <Button 
-            asChild 
-            size="sm"
-            className="lg:hidden bg-accent hover:bg-accent/90 text-white shadow-md hover:shadow-lg transition-all duration-300 font-semibold px-4"
-          >
-            <a href="tel:3238551752">
-              <Phone className="w-4 h-4 mr-1.5" />
-              <span className="text-xs">Call</span>
-            </a>
-          </Button>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2.5 rounded-lg hover:bg-accent/10 transition-colors relative z-20 ml-2"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? (
-              <X className="w-6 h-6 text-foreground" />
-            ) : (
-              <Menu className="w-6 h-6 text-foreground" />
-            )}
-          </button>
         </div>
 
         {/* Mobile Navigation */}
@@ -351,18 +368,6 @@ const Header = () => {
               Contact
             </Link>
             
-            <div className="pt-4 border-t border-accent/10 mt-4 space-y-2">
-              <Button 
-                asChild 
-                variant="outline" 
-                className="w-full border-2 border-accent/30 text-accent hover:bg-accent hover:text-white hover:border-accent transition-all"
-              >
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Book Free Meeting
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </nav>
