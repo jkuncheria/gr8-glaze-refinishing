@@ -1,5 +1,5 @@
 # SEO Audit Report: Gr8 Glaze Refinishing
-**Date:** January 2025  
+**Date:** January 2025
 **Website:** https://www.gr8glazerefinishing.com  
 **Location:** Los Angeles, CA (San Fernando Valley)
 

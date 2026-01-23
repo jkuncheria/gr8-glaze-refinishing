@@ -18,12 +18,12 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="inline-block hover:opacity-90 transition-opacity group">
-              <img 
+                <img 
                 src="/gr8glazelogo.png" 
                 alt="Gr8 Glaze Refinishing Logo" 
                 className="h-16 object-contain group-hover:scale-105 transition-transform duration-300"
-              />
-            </Link>
+                />
+              </Link>
             <p className="text-background/80 text-base leading-relaxed max-w-md">
               Professional bathtub and tile refinishing services in the LA area. Restore surfaces to look new with specialized coatings. Quality warranties available.
             </p>
@@ -135,7 +135,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-xs text-background/60 mb-1">Email</p>
-                  <a 
+              <a
                     href="mailto:gr8glaze@gmail.com" 
                     className="text-base font-semibold text-background/90 hover:text-accent transition-colors break-all"
                   >

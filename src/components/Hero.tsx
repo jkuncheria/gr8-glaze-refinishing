@@ -39,11 +39,11 @@ const Hero = () => {
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-background leading-[1.1] mb-6 animate-fade-in-up">
               The #1 Refinishing<br />
               <span className="pl-8 md:pl-12 lg:pl-16">Specialists in Los Angeles</span>
-            </h1>
+          </h1>
             
             <p className="text-xl md:text-2xl text-background/90 max-w-3xl mx-auto font-light leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               Professional bathtub and tile refinishing services. Restore surfaces to look brand new.
-            </p>
+          </p>
           </div>
 
           {/* CTA Buttons */}

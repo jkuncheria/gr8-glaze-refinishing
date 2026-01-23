@@ -195,15 +195,15 @@ const ContactForm = () => {
                         </Label>
                         <div className="relative">
                           <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                          <Input
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          required
                             className="h-12 pl-10 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
                             placeholder="Enter your full name"
-                          />
+                        />
                         </div>
                       </div>
                       <div className="space-y-2">
@@ -213,16 +213,16 @@ const ContactForm = () => {
                         </Label>
                         <div className="relative">
                           <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                          <Input
-                            id="phone"
-                            name="phone"
-                            type="tel"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            required
+                        <Input
+                          id="phone"
+                          name="phone"
+                          type="tel"
+                          value={formData.phone}
+                          onChange={handleChange}
+                          required
                             className="h-12 pl-10 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
                             placeholder="(555) 123-4567"
-                          />
+                        />
                         </div>
                       </div>
                     </div>
@@ -235,16 +235,16 @@ const ContactForm = () => {
                       </Label>
                       <div className="relative">
                         <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                           className="h-12 pl-10 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
                           placeholder="your.email@example.com"
-                        />
+                      />
                       </div>
                     </div>
 
@@ -256,11 +256,11 @@ const ContactForm = () => {
                       </Label>
                       <div className="relative">
                         <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                        <Input
-                          id="address"
-                          name="address"
-                          value={formData.address}
-                          onChange={handleChange}
+                      <Input
+                        id="address"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleChange}
                           className="h-12 pl-10 border-2 border-border/50 focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all bg-background/50 text-base rounded-lg"
                           placeholder="123 Main St, Los Angeles, CA 90001"
                         />
@@ -327,8 +327,8 @@ const ContactForm = () => {
                                   <Upload className="w-5 h-5 text-accent" />
                                 </div>
                                 <span className="text-sm text-foreground truncate font-medium">
-                                  {file.name}
-                                </span>
+                                {file.name}
+                              </span>
                               </div>
                               <button
                                 type="button"
@@ -346,23 +346,23 @@ const ContactForm = () => {
 
                     {/* Submit Button */}
                     <div className="pt-4">
-                      <Button 
-                        type="submit" 
-                        disabled={isSubmitting}
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
                         className="w-full bg-accent hover:bg-accent/90 text-white h-14 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] rounded-xl disabled:opacity-50 disabled:cursor-not-allowed group"
-                      >
-                        {isSubmitting ? (
-                          <>
+                    >
+                      {isSubmitting ? (
+                        <>
                             <Loader2 className="w-5 h-5 mr-3 animate-spin" />
                             Submitting Your Request...
-                          </>
-                        ) : (
-                          <>
+                        </>
+                      ) : (
+                        <>
                             <Send className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform" />
                             Get Your Free Consultation
-                          </>
-                        )}
-                      </Button>
+                        </>
+                      )}
+                    </Button>
                       <p className="text-center text-sm text-muted-foreground mt-4">
                         We typically respond within 24 hours
                       </p>

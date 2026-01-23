@@ -86,29 +86,9 @@ const Services = () => {
                   </div>
                   
                   {/* Description */}
-                  <p className="text-base text-muted-foreground leading-relaxed mb-8 flex-grow">
+                  <p className="text-base text-muted-foreground leading-relaxed flex-grow">
                     {service.description}
                   </p>
-                  
-                  {/* CTA */}
-                  {service.price && (
-                    <div className="mt-auto pt-6 border-t border-border/50">
-                      {service.price === "Call for Free Quote" ? (
-                        <a 
-                          href="tel:3238551752" 
-                          className="group/cta inline-flex items-center justify-center w-full gap-2 bg-accent/5 hover:bg-accent/10 rounded-xl px-6 py-4 border-2 border-accent/20 hover:border-accent transition-all duration-300 cursor-pointer"
-                        >
-                          <span className="text-base font-semibold text-accent group-hover/cta:text-accent transition-colors">
-                            {service.price}
-                          </span>
-                        </a>
-                      ) : (
-                        <div className="inline-flex items-center justify-center w-full gap-2 bg-accent/5 rounded-xl px-6 py-4 border-2 border-accent/20">
-                          <span className="text-base font-semibold text-foreground">{service.price}</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
                 </CardContent>
               </Card>
             ))}

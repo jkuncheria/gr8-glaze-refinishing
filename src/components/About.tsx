@@ -37,28 +37,28 @@ const About = () => {
                 <Sparkles className="w-6 h-6 text-accent" />
               </div>
               <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold">
-                About Us
-              </h2>
+              About Us
+            </h2>
             </div>
             
             <div className="relative pl-6 border-l-4 border-accent/30">
               <Quote className="absolute -top-2 -left-2 w-8 h-8 text-accent/20" />
               <div className="space-y-5 text-muted-foreground text-lg leading-relaxed">
-                <p>
+              <p>
                   My name is <span className="font-semibold text-foreground">Noe Pineda</span>, founder of <span className="font-semibold text-foreground">Gr8 Glaze Refinishing, Inc.</span>
                 </p>
                 <p>
                   For years, I worked in the refinishing industry giving everything I had to my craft. I delivered quality work, paid attention to details, and took pride in every surface I refinished. But growth opportunities were never offered. Speed and sloppy work were preferred over doing the job right — and that never sat well with me.
-                </p>
-                <p>
+              </p>
+              <p>
                   After many years of learning the ropes, perfecting my skills, and understanding what truly makes a refinishing job last, I reached a turning point. I made one of the hardest decisions of my life — I quit my job and took a leap of faith.
                 </p>
                 <p className="text-foreground font-medium">
                   That decision is how <span className="font-semibold text-accent">Gr8 Glaze Refinishing</span> was born.
-                </p>
-                <p>
+              </p>
+              <p>
                   I started this company with one simple belief: <span className="font-semibold text-accent">quality should never be rushed</span>. Every project deserves proper preparation, professional application, and attention to detail. I treat every home as if it were my own, because my name and reputation stand behind every job.
-                </p>
+              </p>
               </div>
             </div>
             

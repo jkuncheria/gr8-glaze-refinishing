@@ -105,7 +105,7 @@ const Header = () => {
               <img 
                 src="/gr8glazelogo.png" 
                 alt="Gr8 Glaze Refinishing Logo" 
-                className="h-14 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-20 object-contain transition-transform duration-300 group-hover:scale-105"
                 loading="eager"
                 fetchPriority="high"
                 decoding="async"
@@ -130,7 +130,7 @@ const Header = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:block">
           {/* Logo Row - Centered */}
-          <div className="flex justify-center items-center py-4">
+          <div className="flex justify-center items-center pt-4 pb-1">
             <Link 
               to="/" 
               onClick={handleLogoClick} 
@@ -140,7 +140,7 @@ const Header = () => {
                 <img 
                   src="/gr8glazelogo.png" 
                   alt="Gr8 Glaze Refinishing Logo" 
-                  className="h-16 lg:h-20 object-contain transition-transform duration-300 group-hover:scale-105"
+                  className="h-28 lg:h-36 object-contain transition-transform duration-300 group-hover:scale-105"
                   loading="eager"
                   fetchPriority="high"
                   decoding="async"
@@ -151,7 +151,7 @@ const Header = () => {
           </div>
 
           {/* Navigation Row */}
-          <div className="relative flex items-center justify-center pb-4">
+          <div className="relative flex items-center justify-center pb-4 pt-1">
             {/* Desktop Navigation - Centered */}
             <div className="flex items-center gap-6">
             <Link 
