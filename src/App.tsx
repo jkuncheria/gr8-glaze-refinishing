@@ -13,6 +13,10 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import GlazeGuardPro from "./pages/GlazeGuardPro";
+import ThankYou from "./pages/ThankYou";
+import QuoteLanding from "./pages/QuoteLanding";
+import CabinetRefinishing from "./pages/CabinetRefinishing";
+import CabinetsLanding from "./pages/CabinetsLanding";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +36,10 @@ const App = () => (
                 {/* <Route path="/care-tips" element={<CareTips />} /> */}
                 <Route path="/marietta" element={<Marietta />} />
                 <Route path="/glazeguard-pro" element={<GlazeGuardPro />} />
+                <Route path="/thank-you" element={<ThankYou />} />
+                <Route path="/quote" element={<QuoteLanding />} />
+                <Route path="/cabinet-refinishing" element={<CabinetRefinishing />} />
+                <Route path="/cabinets" element={<CabinetsLanding />} />
                 {/* Legacy URL redirects for SEO - 301 redirects handled in vercel.json */}
                 <Route path="/ourwork" element={<Navigate to="/services" replace />} />
                 <Route path="/bathtub-refinishing-marietta-ga" element={<Navigate to="/services" replace />} />

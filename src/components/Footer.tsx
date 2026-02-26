@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { trackCallConversion } from "@/lib/gtag";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -19,7 +20,7 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-6">
             <Link to="/" className="inline-block hover:opacity-90 transition-opacity group">
                 <img 
-                src="/gr8glazelogo.png" 
+                src="/newlogo.PNG" 
                 alt="Gr8 Glaze Refinishing Logo" 
                 className="h-16 object-contain group-hover:scale-105 transition-transform duration-300"
                 />
@@ -29,7 +30,11 @@ const Footer = () => {
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
               <a 
-                href="tel:3238551752" 
+                href="tel:3238551752"
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackCallConversion("tel:3238551752");
+                }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 hover:bg-accent/20 border border-accent/20 hover:border-accent/40 rounded-xl text-background/90 hover:text-accent transition-all duration-300 group"
               >
                 <Phone className="w-4 h-4" />
@@ -121,7 +126,11 @@ const Footer = () => {
                 <div>
                   <p className="text-xs text-background/60 mb-1">Phone</p>
                   <a 
-                    href="tel:3238551752" 
+                    href="tel:3238551752"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      trackCallConversion("tel:3238551752");
+                    }}
                     className="text-base font-semibold text-background/90 hover:text-accent transition-colors"
                   >
                     (323) 855-1752

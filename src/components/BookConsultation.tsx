@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Phone, Calendar, CheckCircle2, Sparkles } from "lucide-react";
+import { trackCallConversion } from "@/lib/gtag";
 
 const BookConsultation = () => {
   const scrollToContact = () => {
@@ -65,7 +66,13 @@ const BookConsultation = () => {
                       asChild
                       className="flex-1"
                     >
-                      <a href="tel:3238551752">
+                      <a 
+                        href="tel:3238551752"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          trackCallConversion("tel:3238551752");
+                        }}
+                      >
                         <Phone className="w-5 h-5 mr-2" />
                         Call Now
                       </a>

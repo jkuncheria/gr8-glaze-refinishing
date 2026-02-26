@@ -21,6 +21,7 @@ import {
 import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { trackCallConversion } from "@/lib/gtag";
 
 const GlazeGuardPro = () => {
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -463,7 +464,13 @@ const GlazeGuardPro = () => {
                     </Link>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
-                    <a href="tel:3238551752">(323) 855-1752</a>
+                    <a 
+                      href="tel:3238551752"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        trackCallConversion("tel:3238551752");
+                      }}
+                    >(323) 855-1752</a>
                   </Button>
                 </div>
               </CardContent>

@@ -7,6 +7,7 @@ import ServiceArea from "@/components/ServiceArea";
 import ContactForm from "@/components/ContactForm";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { trackCallConversion } from "@/lib/gtag";
 
 const Marietta = () => {
   const scrollToContact = () => {
@@ -76,7 +77,13 @@ const Marietta = () => {
                   asChild
                   className="border-2 border-accent/30 hover:border-accent hover:bg-accent/5 px-10 py-7 rounded-xl font-semibold text-lg"
                 >
-                  <a href="tel:3238551752">(323) 855-1752</a>
+                  <a 
+                    href="tel:3238551752"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      trackCallConversion("tel:3238551752");
+                    }}
+                  >(323) 855-1752</a>
                 </Button>
               </div>
             </div>
@@ -188,7 +195,14 @@ const Marietta = () => {
                       <Phone className="w-8 h-8 text-accent" />
                     </div>
                     <h4 className="font-bold text-lg mb-2">Call Today</h4>
-                    <a href="tel:3238551752" className="text-sm text-accent hover:text-accent/80 font-semibold transition-colors">
+                    <a 
+                      href="tel:3238551752"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        trackCallConversion("tel:3238551752");
+                      }}
+                      className="text-sm text-accent hover:text-accent/80 font-semibold transition-colors"
+                    >
                       (323) 855-1752
                     </a>
                   </CardContent>

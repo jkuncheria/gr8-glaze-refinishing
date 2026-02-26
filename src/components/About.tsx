@@ -12,14 +12,14 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="animate-fade-in flex justify-center lg:justify-start">
-            <div className="relative group max-w-[90%] lg:max-w-[85%]">
+            <div className="relative group max-w-full lg:max-w-full">
               {/* Decorative Elements */}
               <div className="absolute -inset-4 bg-gradient-to-br from-accent/20 via-accent/10 to-transparent rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
               <div className="absolute -inset-2 bg-gradient-to-br from-accent/10 to-transparent rounded-3xl"></div>
               
               <div className="relative rounded-2xl overflow-hidden shadow-2xl group-hover:shadow-3xl transition-all duration-500 transform group-hover:scale-[1.02]">
                 <img
-                  src="/bathtub-refinishing.png"
+                  src="/aboutbanda.png"
                   alt="Bathtub Refinishing Before and After"
                   className="w-full h-auto object-cover"
                   loading="lazy"

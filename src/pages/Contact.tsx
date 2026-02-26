@@ -5,6 +5,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema } from "@/lib/structuredData";
+import { trackCallConversion } from "@/lib/gtag";
 
 const Contact = () => {
   const breadcrumbSchema = getBreadcrumbSchema([
@@ -37,7 +38,14 @@ const Contact = () => {
                       <Phone className="w-6 h-6 text-accent" />
                     </div>
                     <h3 className="font-semibold text-sm text-foreground/70 mb-2">Phone</h3>
-                    <a href="tel:3238551752" className="text-foreground hover:text-accent transition-colors font-medium">
+                    <a 
+                      href="tel:3238551752"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        trackCallConversion("tel:3238551752");
+                      }}
+                      className="text-foreground hover:text-accent transition-colors font-medium"
+                    >
                       (323) 855-1752
                     </a>
                   </CardContent>

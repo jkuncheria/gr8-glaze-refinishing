@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,9 +8,11 @@ import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Send, Upload, X, User, Loader2, MapPin, Clock, CheckCircle2, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { uploadFilesToRenoLens, submitContactFormToRenoLens } from "@/lib/renolensApi";
+import { trackCallConversion } from "@/lib/gtag";
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -44,20 +47,8 @@ const ContactForm = () => {
       // Step 2: Submit form data to RenoLens
       await submitContactFormToRenoLens(formData, imageUrls);
 
-      // Success - show toast and reset form
-      toast({
-        title: "Thank you for contacting us!",
-        description: "We will get back to you as soon as possible.",
-      });
-      
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        address: "",
-        message: "",
-      });
-      setUploadedFiles([]);
+      // Success - redirect to thank you page
+      navigate("/thank-you");
     } catch (error) {
       console.error("Form submission error:", error);
       toast({
@@ -127,7 +118,14 @@ const ContactForm = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-sm text-muted-foreground mb-1">Phone</h3>
-                        <a href="tel:3238551752" className="text-lg font-semibold text-foreground hover:text-accent transition-colors">
+                        <a 
+                          href="tel:3238551752"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            trackCallConversion("tel:3238551752");
+                          }}
+                          className="text-lg font-semibold text-foreground hover:text-accent transition-colors"
+                        >
                           (323) 855-1752
                         </a>
                       </div>

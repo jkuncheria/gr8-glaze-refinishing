@@ -1,7 +1,9 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Home, Bath, UtensilsCrossed, Droplet, ShowerHead, Waves, Package, WashingMachine, SquareStack } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sparkles, Home, Bath, UtensilsCrossed, Droplet, ShowerHead, Waves, Package, WashingMachine, SquareStack, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import SEO from "@/components/SEO";
 import { getBreadcrumbSchema, getServiceSchema } from "@/lib/structuredData";
 
@@ -11,7 +13,7 @@ const allServices = [
     icon: Bath,
     title: "Bathtub Refinishing",
     description: "Restore old, chipped, faded, or dated tubs (cast iron, fiberglass, acrylic) to a new, flawless finish. Professional reglazing that saves thousands compared to replacement.",
-    image: "/bathtub-refinishing.png",
+    image: "/bathtubbanda.png",
     price: "Call for Free Quote",
   },
   {
@@ -25,7 +27,7 @@ const allServices = [
     icon: UtensilsCrossed,
     title: "Color Changes",
     description: "Transform the color of tubs and tiles (e.g., from powder blue to white). Update your space without the cost and disruption of replacement.",
-    image: "/color-changes.png",
+    image: "/colorchangebanda.png",
     price: "Call for Free Quote",
   },
   // Additional 6 services
@@ -35,6 +37,7 @@ const allServices = [
     description: "Breathe new life into your cabinets with professional refinishing. Modern finishes at a fraction of the cost of full replacement.",
     image: "/full-gallery/a7.2.jpeg",
     price: "Call for Free Quote",
+    link: "/cabinet-refinishing",
   },
   {
     icon: Waves,
@@ -153,6 +156,19 @@ const Services = () => {
                     <p className="text-base text-muted-foreground leading-relaxed flex-grow">
                       {service.description}
                     </p>
+                    
+                    {/* Learn More Button - only for services with a link */}
+                    {service.link && (
+                      <Button 
+                        asChild
+                        className="mt-6 bg-accent hover:bg-accent/90 text-white font-semibold"
+                      >
+                        <Link to={service.link}>
+                          Learn More
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Link>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               ))}
